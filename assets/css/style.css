@@ -1,5 +1,5 @@
 body {
-    background: #000000 url("../images/tv-wall1b.png") no-repeat fixed center;
+    background: #000000 url("../images/tv-wall1.png") no-repeat fixed center;
     background-size: cover;
     color: #ffffff;
     text-align: center;
@@ -10,6 +10,7 @@ h1 {
     font-size: 4em;
     font-family: 'Staatliches', cursive;
     display: inline-block;
+    margin-left: 20px;
 }
 
 .side-title {

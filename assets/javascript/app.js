@@ -52,7 +52,7 @@ quizMaterial = [
 
 var qIndex = -1;
 var correct = 0;
-var timer;
+var timer = 25;
 var timeInt;
 
 // FUNCTIONS
@@ -72,7 +72,7 @@ function nextQuestion() {
         $("#choices").empty();
         $("#q-num").html(qIndex+1);
         $("#question").html(quizMaterial[qIndex].question);
-        $("#time-panel").html("<span class='side-text' id='time-remaining'>10</span> sec");
+        $("#time-panel").html("<span class='side-text' id='time-remaining'>" + timer + "</span> sec");
 
         quizMaterial[qIndex].choices.forEach(function(value, i) {
             var newButton = $("<button type='button'>");
@@ -100,10 +100,10 @@ function decrement () {
 
     if (timer === 0) {
         clearInterval(timeInt);
-        $("#choices").html("<p class='giant'>Time's Up!</p><br>");
-        $("#time-panel").html();
-        $("#answer").html("<p>The correct answer is: " + quizMaterial[qIndex].choices[quizMaterial[qIndex].answer] + "</p>");
-        setTimeout(nextQuestion, 1000 * 4);
+        $("#time-panel").html("&nbsp;");
+        $("#choices").html("<p class='giant'>Time's Up! The answer:</p><br>");
+        $("#answer").html("<p class='giant' style='font-weight: bold'>" + quizMaterial[qIndex].choices[quizMaterial[qIndex].answer] + "</p>");
+        setTimeout(nextQuestion, 1000 * 6);
     }
 }
 
@@ -133,8 +133,8 @@ $(document).on("click", ".choiceButton", function () {
         $("#answer").html("<p class='giant'>Correct!</p>");
         $("#correct-panel").html(correct);
     } else {
-        $("#choices").html("<p class='giant'>Sorry, the answer is</p><br>");
-        $("#answer").html("<p class='giant'>" + quizMaterial[qIndex].choices[correctChoice] + "</p>");
+        $("#choices").html("<p class='giant'>Sorry, the answer is...</p><br>");
+        $("#answer").html("<p class='giant' style='font-weight: bold'>" + quizMaterial[qIndex].choices[correctChoice] + "</p>");
     }
 
     setTimeout(nextQuestion, 1000 * 4);
