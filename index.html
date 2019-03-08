@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col main">
+                <div class="row justify-content-center">
+                    <img src="assets/images/i-heart-tv.png" height=100px>
+                    <h1>TV LOVES YOU, HONEY</h1>
+                </div>
+                <br>
+
+                <div class="row justify-content-center" id="question">&nbsp</div>
+                <br>
+
+                <div class="row justify-content-center" id="choices">&nbsp</div>
+                <div class="row justify-content-center" id="answer">&nbsp</div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <div class="card-body">
+                        <p id="q-title" class="side-title">&nbsp</p>
+                        <span id="q-num" class='side-text'>&nbsp</span>
+                        <hr>
+
+                        <p id="time-title"  class="side-title">&nbsp</p>
+                        <div id="time-panel">&nbsp</div>
+                        <hr>
+
+                        <p id="correct-title" class="side-title">&nbsp</p>
+                        <span id="correct-panel" class="side-text">&nbsp</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center" id="button-panel">
+                    <button type="button" class="btn btn-success btn-lg btn-block start-quiz">Start Quiz</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+</html>
