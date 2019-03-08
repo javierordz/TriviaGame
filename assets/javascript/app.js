@@ -4,7 +4,7 @@ quizMaterial = [
         choices: ["The Twilight Zone", "Lost in Space", "The Alfred Hitchcock Hour", "Star Trek"],
         answer: 0
     },
-    {   question: "The theme song of which classic TV show ends with the line, “You’re gonna make it after all”?",
+    {   question: "The theme song of which iconic TV sitcom ends with a hat toss and the line, “You’re gonna make it after all”?",
         choices: ["The Dick Van Dyke Show", "The Odd Couple", "The Mary Tyler Moore Show", "Taxi"],
         answer: 2
     },
@@ -28,7 +28,7 @@ quizMaterial = [
         choices: ["Judy Garland", "Leonardo DiCaprio", "Jodie Foster", "Ron Howard"],
         answer: 3
     },
-    {   question: "Which show is notable for having killed off one of its main characters over 120 times?",
+    {   question: "What show gained notoriety for killing off one of its main characters over 120 times?",
         choices: ["Supernatural", "South Park", "Stargate SG-1", "The Simpsons"],
         answer: 1
     },
@@ -44,9 +44,9 @@ quizMaterial = [
         choices: ["Drew Barrymore", "Miley Cyrus", "Macaulay Culkin", "Justin Bieber"],
         answer: 0
     },
-    {   question: "Which of these is NOT a TV show fictionalizing a REAL musical group?",
-        choices: ["The Beatles", "Flight of the Conchords", "The Monkees", "Garfunkel and Oats", "The Jonas Brothers"],
-        answer: 4
+    {   question: "Which of these is NOT a TV show fictionalizing a real musical group?",
+        choices: ["The Beatles", "Garfunkel and Oats", "Jonas", "Flight of the Conchords", "The Jackson 5ive", "Metalocalypse"],
+        answer: 5
     }
 ]
 
@@ -110,7 +110,8 @@ function decrement () {
 function finishQuiz() {
     $("#q-num").empty();
     $("#question").empty();
-    $("#answer").html("<p>You got " + correct + " out of " + quizMaterial.length + ".</p><br><p class='giant'>" + (correct / quizMaterial.length * 100).toFixed() + "% correct!</p>");
+    $("#choices").html("<p>You got " + correct + " out of " + quizMaterial.length + ".</p>");
+    $("#answer").html("<p class='giant'>" + (correct / quizMaterial.length * 100).toFixed() + "% correct!</p>");
     $("#button-panel").html("<button type='button' class='btn btn-warning btn-lg btn-block start-quiz'>Try Again</button>")
     qIndex = -1;
     correct = 0;
